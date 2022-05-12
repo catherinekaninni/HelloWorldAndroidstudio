@@ -7,36 +7,40 @@
     tools:context=".Money_Activity">
 
     <ImageView
-        android:id="@+id/imgPhone"
-        android:layout_width="33dp"
-        android:layout_height="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etNumber"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etNumber"
-        app:layout_constraintVertical_bias="0.35"
-        app:srcCompat="@drawable/ic_baseline_phone_in_talk_24" />
-
-    <EditText
-        android:id="@+id/etNumber"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etnumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etnumber"
+        app:srcCompat="@drawable/ic_baseline_phone_in_talk_24" />
+
+
+    <EditText
+        android:id="@+id/etnumber"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgPhone"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAmount"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnAmount"
-        app:srcCompat="@drawable/ic_baseline_attach_money_24"
-        tools:layout_editor_absoluteX="33dp" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
 
     <EditText
         android:id="@+id/btnAmount"
@@ -49,16 +53,17 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgAmount"
-        app:layout_constraintTop_toBottomOf="@+id/etNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/etnumber" />
 
     <ImageView
         android:id="@+id/imgPin"
         android:layout_width="22dp"
         android:layout_height="24dp"
+        android:layout_marginStart="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnPassword"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnPassword"
-        app:srcCompat="@drawable/ic_baseline_fiber_pin_24"
-        tools:layout_editor_absoluteX="33dp" />
+        app:srcCompat="@drawable/ic_baseline_fiber_pin_24" />
 
     <EditText
         android:id="@+id/btnPassword"
@@ -70,7 +75,9 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imgPin"
         app:layout_constraintTop_toBottomOf="@+id/btnAmount" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
